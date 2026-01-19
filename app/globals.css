@@ -16,12 +16,15 @@
 
 }
 
-html {
+html, body {
   overflow-x: hidden;
+  max-width: 100vw;
+  @apply antialiased;
 }
 
 * {
   @apply font-poppins;
+  box-sizing: border-box;
 }
 /* INPUT GROUP */
 .input-group {
@@ -34,5 +37,15 @@ html {
 
 .input-group input,
 .input-group textarea {
-  @apply px-4 py-2.5 bg-gray-100 w-full focus:border focus:border-gray-400 outline-none text-sm;
+  @apply px-4 py-2.5 bg-gray-100 w-full focus:border focus:border-gray-400 outline-none text-sm transition-all;
+  border: 1px solid transparent;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
