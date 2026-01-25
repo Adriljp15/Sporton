@@ -13,11 +13,10 @@ const OrdersStatus = async ({params}:TPageProps) => {
 
     return (
         <main
-            className="bg-gray-100 min-h-[80vh] pt-20">
-            <div className="max-w-5xl mx-auto py-20">
+            className="bg-gray-100 min-h-[80vh] py-20 pt-20">
+            <div className="max-w-5xl mx-auto pt-20 pb-20">
                 <h1 className="text-5xl font-bold text-center mb-11">Order Status</h1>
             </div>
-            
                 {transaction.status === "pending" && <OrderSubmitted />}
                 {transaction.status === "paid" && <OrderConfirmed />}
                 {transaction.status === "rejected" && <OrderRejected />}
