@@ -2,11 +2,7 @@ import { fetchAPI, getAuthHeaders } from "../lib/api";
 import { Bank } from "../types";
 
 export const getAllBanks = async (): Promise<Bank[]> => {
-    return await fetchAPI<Bank[]>("/banks", {
-        headers: {
-            ...getAuthHeaders(),
-        }
-    })
+  return await fetchAPI<Bank[]>("/banks");
 };
 
 export const createBank = async (data: Partial<Bank>): Promise<Bank> => {
